@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "617776416291",
+    "project_id": "emotify-ce9f3",
+    "storage_bucket": "emotify-ce9f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617776416291:android:e0b481a707ed4c6780d396",
+        "android_client_info": {
+          "package_name": "com.flutterflow.emotifyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617776416291-9n43lp1am2s88sujhhuosul08daja3ag.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutterflow.emotifyapp",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "617776416291-jst2q16or9t1aq40c2lg0bbg9g559uh0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNKxyVdIsTPYHdh1sAS5hktQ4sVXjsaVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617776416291-jst2q16or9t1aq40c2lg0bbg9g559uh0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "617776416291-d0piu9fo5c9pa1b99d96t4td7nfo5fsl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.bhivinr.emotify"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617776416291:android:1d8be995ffdad86180d396",
+        "android_client_info": {
+          "package_name": "dev.bhivinr.emotify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617776416291-0d3tk8t1v0srkjkpnbnid65pn13kfcg6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.bhivinr.emotify",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "617776416291-n1tgjued1ihlu8q9snmoqdv8pcsauk07.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.bhivinr.emotify",
+            "certificate_hash": "4f6d8302cfd4c7a853ed7738d6c0401bc3f535ee"
+          }
+        },
+        {
+          "client_id": "617776416291-jst2q16or9t1aq40c2lg0bbg9g559uh0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNKxyVdIsTPYHdh1sAS5hktQ4sVXjsaVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617776416291-jst2q16or9t1aq40c2lg0bbg9g559uh0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "617776416291-d0piu9fo5c9pa1b99d96t4td7nfo5fsl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.bhivinr.emotify"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
