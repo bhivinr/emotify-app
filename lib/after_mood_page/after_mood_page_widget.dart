@@ -112,73 +112,19 @@ class _AfterMoodPageWidgetState extends State<AfterMoodPageWidget> {
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Align(
-                    alignment: AlignmentDirectional(0, 0),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                      child: Container(
-                        width: 100,
-                        height: 100,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF850C85),
-                        ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Align(
-                              alignment: AlignmentDirectional(-0.05, -0.95),
-                              child: Text(
-                                'Happy',
-                                style: FlutterFlowTheme.bodyText1.override(
-                                  fontFamily: 'Poppins',
-                                  color: Color(0xFFFFE300),
-                                ),
-                              ),
-                            ),
-                            InkWell(
-                              onTap: () async {
-                                await Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => RatingAfterWidget(
-                                      moodBefore: widget.moodBefore,
-                                      ratingBefore: widget.ratingBefore,
-                                      contentType: widget.contentType,
-                                      moodAfter: 'happy',
-                                    ),
-                                  ),
-                                );
-                              },
-                              child: Image.asset(
-                                'assets/images/Happy.jpg',
-                                width: 100,
-                                height: 100,
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(130, 0, 0, 0),
-                    child: Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF850C85),
-                      ),
-                      child: Column(
+                  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0, -0.9),
+                            alignment: AlignmentDirectional(-0.05, -0.95),
                             child: Text(
-                              'Angry',
+                              'Happy',
                               style: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Poppins',
-                                color: Color(0xFFFF0000),
+                                color: Color(0xFFFFE300),
                               ),
                             ),
                           ),
@@ -188,13 +134,16 @@ class _AfterMoodPageWidgetState extends State<AfterMoodPageWidget> {
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => RatingAfterWidget(
-                                    moodAfter: 'angry',
+                                    moodBefore: widget.moodBefore,
+                                    ratingBefore: widget.ratingBefore,
+                                    contentType: widget.contentType,
+                                    moodAfter: 'happy',
                                   ),
                                 ),
                               );
                             },
                             child: Image.asset(
-                              'assets/images/Angry.jpg',
+                              'assets/images/Happy.jpg',
                               width: 100,
                               height: 100,
                               fit: BoxFit.cover,
@@ -202,22 +151,7 @@ class _AfterMoodPageWidgetState extends State<AfterMoodPageWidget> {
                           ),
                         ],
                       ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                    child: Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF850C85),
-                      ),
-                      child: Column(
+                      Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Align(
@@ -253,68 +187,7 @@ class _AfterMoodPageWidgetState extends State<AfterMoodPageWidget> {
                           ),
                         ],
                       ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(130, 0, 0, 0),
-                    child: Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF850C85),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Align(
-                            alignment: AlignmentDirectional(0, -0.95),
-                            child: Text(
-                              'Scared',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                                color: Color(0xFFDF73FF),
-                              ),
-                            ),
-                          ),
-                          InkWell(
-                            onTap: () async {
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => RatingAfterWidget(
-                                    moodAfter: 'scared',
-                                    moodBefore: widget.moodBefore,
-                                    ratingBefore: widget.ratingBefore,
-                                    contentType: widget.contentType,
-                                  ),
-                                ),
-                              );
-                            },
-                            child: Image.asset(
-                              'assets/images/Scared.jpg',
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                    child: Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF850C85),
-                      ),
-                      child: Column(
+                      Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Align(
@@ -350,101 +223,166 @@ class _AfterMoodPageWidgetState extends State<AfterMoodPageWidget> {
                           ),
                         ],
                       ),
-                    ),
+                    ],
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(130, 0, 0, 0),
-                    child: Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF850C85),
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Align(
-                            alignment: AlignmentDirectional(0, -0.95),
-                            child: Text(
-                              'Stressed',
-                              style: FlutterFlowTheme.bodyText1.override(
-                                fontFamily: 'Poppins',
-                                color: Color(0xFF61DE2A),
+                    padding: EdgeInsetsDirectional.fromSTEB(120, 0, 0, 0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(0, -0.9),
+                              child: Text(
+                                'Angry',
+                                style: FlutterFlowTheme.bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFFFF0000),
+                                ),
                               ),
                             ),
-                          ),
-                          InkWell(
-                            onTap: () async {
-                              await Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => RatingAfterWidget(
-                                    moodBefore: widget.moodBefore,
-                                    ratingBefore: widget.ratingBefore,
-                                    contentType: widget.contentType,
-                                    moodAfter: 'stressed',
+                            InkWell(
+                              onTap: () async {
+                                await Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => RatingAfterWidget(
+                                      moodAfter: 'angry',
+                                    ),
                                   ),
-                                ),
-                              );
-                            },
-                            child: Image.asset(
-                              'assets/images/Stressed_(1).jpg',
-                              width: 100,
-                              height: 100,
-                              fit: BoxFit.cover,
+                                );
+                              },
+                              child: Image.asset(
+                                'assets/images/Angry.jpg',
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
+                          ],
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(0, -0.95),
+                              child: Text(
+                                'Scared',
+                                style: FlutterFlowTheme.bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFFDF73FF),
+                                ),
+                              ),
+                            ),
+                            InkWell(
+                              onTap: () async {
+                                await Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => RatingAfterWidget(
+                                      moodAfter: 'scared',
+                                      moodBefore: widget.moodBefore,
+                                      ratingBefore: widget.ratingBefore,
+                                      contentType: widget.contentType,
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: Image.asset(
+                                'assets/images/Scared.jpg',
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(0, -0.95),
+                              child: Text(
+                                'Stressed',
+                                style: FlutterFlowTheme.bodyText1.override(
+                                  fontFamily: 'Poppins',
+                                  color: Color(0xFF61DE2A),
+                                ),
+                              ),
+                            ),
+                            InkWell(
+                              onTap: () async {
+                                await Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => RatingAfterWidget(
+                                      moodBefore: widget.moodBefore,
+                                      ratingBefore: widget.ratingBefore,
+                                      contentType: widget.contentType,
+                                      moodAfter: 'stressed',
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: Image.asset(
+                                'assets/images/Stressed_(1).jpg',
+                                width: 100,
+                                height: 100,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                child: Container(
-                  width: 100,
-                  height: 100,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF850C85),
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Align(
-                        alignment: AlignmentDirectional(0, -0.95),
-                        child: Text(
-                          'Empty',
-                          style: FlutterFlowTheme.bodyText1.override(
-                            fontFamily: 'Poppins',
-                            color: Colors.black,
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(130, 0, 0, 0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Align(
+                          alignment: AlignmentDirectional(0, -0.95),
+                          child: Text(
+                            'Empty',
+                            style: FlutterFlowTheme.bodyText1.override(
+                              fontFamily: 'Poppins',
+                              color: Colors.black,
+                            ),
                           ),
                         ),
-                      ),
-                      InkWell(
-                        onTap: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => RatingAfterWidget(
-                                moodBefore: widget.moodBefore,
-                                ratingBefore: widget.ratingBefore,
-                                contentType: widget.contentType,
-                                moodAfter: 'empty',
+                        InkWell(
+                          onTap: () async {
+                            await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => RatingAfterWidget(
+                                  moodBefore: widget.moodBefore,
+                                  ratingBefore: widget.ratingBefore,
+                                  contentType: widget.contentType,
+                                  moodAfter: 'empty',
+                                ),
                               ),
-                            ),
-                          );
-                        },
-                        child: Image.asset(
-                          'assets/images/Empty.jpg',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
+                            );
+                          },
+                          child: Image.asset(
+                            'assets/images/Empty.jpg',
+                            width: 100,
+                            height: 100,
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
+                ],
               ),
             ],
           ),
