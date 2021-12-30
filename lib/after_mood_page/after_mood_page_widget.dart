@@ -111,6 +111,7 @@ class _AfterMoodPageWidgetState extends State<AfterMoodPageWidget> {
               ),
               Row(
                 mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
                     mainAxisSize: MainAxisSize.max,
