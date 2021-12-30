@@ -88,125 +88,119 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 children: [
                   Row(
                     mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Align(
                         alignment: AlignmentDirectional(0, 0),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Align(
-                                    alignment:
-                                        AlignmentDirectional(-0.05, -0.95),
-                                    child: Text(
-                                      'Happy',
-                                      style:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Poppins',
-                                        color: Color(0xFFFFE300),
-                                      ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(-0.05, -0.95),
+                                  child: Text(
+                                    'Happy',
+                                    style: FlutterFlowTheme.bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFFFFE300),
                                     ),
                                   ),
-                                  Align(
-                                    alignment: AlignmentDirectional(0, 0),
-                                    child: InkWell(
-                                      onTap: () async {
-                                        await Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                RatingBeforeWidget(
-                                              moodBefore: 'happy',
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                      child: Image.asset(
-                                        'assets/images/Happy.jpg',
-                                        width: 100,
-                                        height: 100,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Align(
-                                    alignment: AlignmentDirectional(0, -0.95),
-                                    child: Text(
-                                      'Sad',
-                                      style:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Poppins',
-                                        color: Color(0xFF00BFFF),
-                                      ),
-                                    ),
-                                  ),
-                                  InkWell(
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: InkWell(
                                     onTap: () async {
                                       await Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                           builder: (context) =>
                                               RatingBeforeWidget(
-                                            moodBefore: 'sad',
+                                            moodBefore: 'happy',
                                           ),
                                         ),
                                       );
                                     },
                                     child: Image.asset(
-                                      'assets/images/Sad.jpg',
+                                      'assets/images/Happy.jpg',
                                       width: 100,
                                       height: 100,
                                       fit: BoxFit.cover,
                                     ),
                                   ),
-                                ],
-                              ),
-                              Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Align(
-                                    alignment: AlignmentDirectional(0, -0.95),
-                                    child: Text(
-                                      'Tired',
-                                      style:
-                                          FlutterFlowTheme.bodyText1.override(
-                                        fontFamily: 'Poppins',
-                                        color: Color(0xFFC0C0C0),
+                                ),
+                              ],
+                            ),
+                            Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0, -0.95),
+                                  child: Text(
+                                    'Sad',
+                                    style: FlutterFlowTheme.bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF00BFFF),
+                                    ),
+                                  ),
+                                ),
+                                InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            RatingBeforeWidget(
+                                          moodBefore: 'sad',
+                                        ),
                                       ),
+                                    );
+                                  },
+                                  child: Image.asset(
+                                    'assets/images/Sad.jpg',
+                                    width: 100,
+                                    height: 100,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(0, -0.95),
+                                  child: Text(
+                                    'Tired',
+                                    style: FlutterFlowTheme.bodyText1.override(
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFFC0C0C0),
                                     ),
                                   ),
-                                  InkWell(
-                                    onTap: () async {
-                                      await Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              RatingBeforeWidget(
-                                            moodBefore: 'tired',
-                                          ),
+                                ),
+                                InkWell(
+                                  onTap: () async {
+                                    await Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            RatingBeforeWidget(
+                                          moodBefore: 'tired',
                                         ),
-                                      );
-                                    },
-                                    child: Image.asset(
-                                      'assets/images/Tired.jpg',
-                                      width: 100,
-                                      height: 100,
-                                      fit: BoxFit.cover,
-                                    ),
+                                      ),
+                                    );
+                                  },
+                                  child: Image.asset(
+                                    'assets/images/Tired.jpg',
+                                    width: 100,
+                                    height: 100,
+                                    fit: BoxFit.cover,
                                   ),
-                                ],
-                              ),
-                            ],
-                          ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                       Align(
