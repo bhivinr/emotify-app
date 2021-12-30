@@ -326,42 +326,40 @@ class _HomePageWidgetState extends State<HomePageWidget> {
               ),
               Row(
                 mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(130, 0, 0, 0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Align(
-                          alignment: AlignmentDirectional(0, -0.95),
-                          child: Text(
-                            'Empty',
-                            style: FlutterFlowTheme.bodyText1.override(
-                              fontFamily: 'Poppins',
-                              color: Colors.black,
-                            ),
+                  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Align(
+                        alignment: AlignmentDirectional(0, -0.95),
+                        child: Text(
+                          'Empty',
+                          style: FlutterFlowTheme.bodyText1.override(
+                            fontFamily: 'Poppins',
+                            color: Colors.black,
                           ),
                         ),
-                        InkWell(
-                          onTap: () async {
-                            await Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => RatingBeforeWidget(
-                                  moodBefore: 'empty',
-                                ),
+                      ),
+                      InkWell(
+                        onTap: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RatingBeforeWidget(
+                                moodBefore: 'empty',
                               ),
-                            );
-                          },
-                          child: Image.asset(
-                            'assets/images/Empty.jpg',
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.cover,
-                          ),
+                            ),
+                          );
+                        },
+                        child: Image.asset(
+                          'assets/images/Empty.jpg',
+                          width: 100,
+                          height: 100,
+                          fit: BoxFit.cover,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
               ),
