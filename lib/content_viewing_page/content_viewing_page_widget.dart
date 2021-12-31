@@ -142,56 +142,126 @@ class _ContentViewingPageWidgetState extends State<ContentViewingPageWidget> {
                     ),
                   ),
                 ),
-                FFButtonWidget(
-                  onPressed: () async {
-                    await launchURL(contentViewingPageMoodContentRecord.url);
-                  },
-                  text: 'Show Me the Content',
-                  options: FFButtonOptions(
-                    width: 200,
-                    height: 40,
-                    color: Color(0xFFFDD835),
-                    textStyle: FlutterFlowTheme.subtitle2.override(
-                      fontFamily: 'Poppins',
-                      color: Colors.white,
-                    ),
-                    borderSide: BorderSide(
-                      color: Colors.transparent,
-                      width: 1,
-                    ),
-                    borderRadius: 12,
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 60,
+                        height: 60,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFD4AF37),
+                          border: Border.all(
+                            color: Color(0xFFFFD700),
+                          ),
+                        ),
+                        child: Align(
+                          alignment: AlignmentDirectional(0, 1),
+                          child: FlutterFlowIconButton(
+                            borderColor: Colors.transparent,
+                            borderRadius: 30,
+                            borderWidth: 1,
+                            buttonSize: 60,
+                            icon: Icon(
+                              Icons.remove_red_eye,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                            onPressed: () {
+                              print('IconButton pressed ...');
+                            },
+                          ),
+                        ),
+                      ),
+                      FFButtonWidget(
+                        onPressed: () async {
+                          await launchURL(
+                              contentViewingPageMoodContentRecord.url);
+                        },
+                        text: 'Show Me the Content',
+                        options: FFButtonOptions(
+                          width: 300,
+                          height: 60,
+                          color: Color(0xFF053047),
+                          textStyle: FlutterFlowTheme.subtitle2.override(
+                            fontFamily: 'Poppins',
+                            color: Colors.white,
+                          ),
+                          borderSide: BorderSide(
+                            color: Color(0xFFFFD700),
+                            width: 1,
+                          ),
+                          borderRadius: 0,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                  child: FFButtonWidget(
-                    onPressed: () async {
-                      await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => NotePageWidget(
-                            contentType: widget.contentType,
-                            moodBefore: widget.moodBefore,
-                            ratingBefore: widget.ratingBefore,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 60,
+                        height: 60,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFD4AF37),
+                          border: Border.all(
+                            color: Color(0xFFFFD700),
                           ),
                         ),
-                      );
-                    },
-                    text: 'I\'m Done Viewing',
-                    options: FFButtonOptions(
-                      width: 200,
-                      height: 40,
-                      color: Color(0xFFFDD835),
-                      textStyle: FlutterFlowTheme.subtitle2.override(
-                        fontFamily: 'Poppins',
-                        color: Colors.white,
+                        child: Align(
+                          alignment: AlignmentDirectional(0, 0),
+                          child: FlutterFlowIconButton(
+                            borderColor: Color(0x00FFD700),
+                            borderRadius: 30,
+                            borderWidth: 1,
+                            buttonSize: 60,
+                            icon: Icon(
+                              Icons.check,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                            onPressed: () {
+                              print('IconButton pressed ...');
+                            },
+                          ),
+                        ),
                       ),
-                      borderSide: BorderSide(
-                        color: Colors.transparent,
-                        width: 1,
+                      FFButtonWidget(
+                        onPressed: () async {
+                          await Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => NotePageWidget(
+                                contentType: widget.contentType,
+                                moodBefore: widget.moodBefore,
+                                ratingBefore: widget.ratingBefore,
+                              ),
+                            ),
+                          );
+                        },
+                        text: 'I\'m Done Viewing',
+                        options: FFButtonOptions(
+                          width: 300,
+                          height: 60,
+                          color: Color(0xFF34B233),
+                          textStyle: FlutterFlowTheme.subtitle2.override(
+                            fontFamily: 'Poppins',
+                            color: Colors.white,
+                          ),
+                          borderSide: BorderSide(
+                            color: Color(0xFFFFD700),
+                            width: 1,
+                          ),
+                          borderRadius: 0,
+                        ),
                       ),
-                      borderRadius: 12,
-                    ),
+                    ],
                   ),
                 ),
               ],
