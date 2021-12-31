@@ -105,61 +105,50 @@ class _RatingBeforeWidgetState extends State<RatingBeforeWidget> {
                 ),
               ),
             ),
-            Expanded(
-              child: Align(
-                alignment: AlignmentDirectional(0, 0),
-                child: ListView(
-                  padding: EdgeInsets.zero,
-                  scrollDirection: Axis.vertical,
-                  children: [
-                    Align(
-                      alignment: AlignmentDirectional(0, 0),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
-                        child: RatingBar.builder(
-                          onRatingUpdate: (newValue) =>
-                              setState(() => ratingBarValue = newValue),
-                          itemBuilder: (context, index) => Icon(
-                            Icons.emoji_emotions,
-                            color: FlutterFlowTheme.secondaryColor,
-                          ),
-                          direction: Axis.horizontal,
-                          initialRating: ratingBarValue ??= 0,
-                          unratedColor: Color(0xFF9E9E9E),
-                          itemCount: 10,
-                          itemSize: 40,
-                          glowColor: FlutterFlowTheme.secondaryColor,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 100, 0, 0),
-                      child: FlutterFlowIconButton(
-                        borderColor: Colors.transparent,
-                        borderRadius: 30,
-                        borderWidth: 1,
-                        buttonSize: 60,
-                        fillColor: Color(0xFFFDD835),
-                        icon: Icon(
-                          Icons.navigate_next,
-                          color: Colors.white,
-                          size: 30,
-                        ),
-                        onPressed: () async {
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ContentSelectionWidget(
-                                moodBefore: widget.moodBefore,
-                                ratingBefore: ratingBarValue.round(),
-                              ),
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                  ],
+            Align(
+              alignment: AlignmentDirectional(0, 0),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                child: RatingBar.builder(
+                  onRatingUpdate: (newValue) =>
+                      setState(() => ratingBarValue = newValue),
+                  itemBuilder: (context, index) => Icon(
+                    Icons.emoji_emotions,
+                    color: FlutterFlowTheme.secondaryColor,
+                  ),
+                  direction: Axis.horizontal,
+                  initialRating: ratingBarValue ??= 0,
+                  unratedColor: Color(0xFF9E9E9E),
+                  itemCount: 10,
+                  itemSize: 40,
+                  glowColor: FlutterFlowTheme.secondaryColor,
                 ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 100, 0, 0),
+              child: FlutterFlowIconButton(
+                borderColor: Colors.transparent,
+                borderRadius: 30,
+                borderWidth: 2,
+                buttonSize: 70,
+                fillColor: Color(0xFFFDD835),
+                icon: Icon(
+                  Icons.navigate_next,
+                  color: Colors.white,
+                  size: 30,
+                ),
+                onPressed: () async {
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ContentSelectionWidget(
+                        moodBefore: widget.moodBefore,
+                        ratingBefore: ratingBarValue.round(),
+                      ),
+                    ),
+                  );
+                },
               ),
             ),
           ],

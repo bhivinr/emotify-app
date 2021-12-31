@@ -117,73 +117,60 @@ class _RatingAfterWidgetState extends State<RatingAfterWidget> {
                 ),
               ),
             ),
-            Expanded(
-              child: Align(
-                alignment: AlignmentDirectional(0, 0),
-                child: ListView(
-                  padding: EdgeInsets.zero,
-                  scrollDirection: Axis.vertical,
-                  children: [
-                    Align(
-                      alignment: AlignmentDirectional(0, 0),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
-                        child: RatingBar.builder(
-                          onRatingUpdate: (newValue) =>
-                              setState(() => ratingBarValue = newValue),
-                          itemBuilder: (context, index) => Icon(
-                            Icons.emoji_emotions,
-                            color: FlutterFlowTheme.secondaryColor,
-                          ),
-                          direction: Axis.horizontal,
-                          initialRating: ratingBarValue ??= 0,
-                          unratedColor: Color(0xFF9E9E9E),
-                          itemCount: 10,
-                          itemSize: 40,
-                          glowColor: FlutterFlowTheme.secondaryColor,
-                        ),
-                      ),
+            Align(
+              alignment: AlignmentDirectional(0, 0),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                child: RatingBar.builder(
+                  onRatingUpdate: (newValue) =>
+                      setState(() => ratingBarValue = newValue),
+                  itemBuilder: (context, index) => Icon(
+                    Icons.emoji_emotions,
+                    color: FlutterFlowTheme.secondaryColor,
+                  ),
+                  direction: Axis.horizontal,
+                  initialRating: ratingBarValue ??= 0,
+                  unratedColor: Color(0xFF9E9E9E),
+                  itemCount: 10,
+                  itemSize: 40,
+                  glowColor: FlutterFlowTheme.secondaryColor,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+              child: FFButtonWidget(
+                onPressed: () async {
+                  final feedbackCreateData = createFeedbackRecordData(
+                    ratingAfter: ratingBarValue.round(),
+                    moodAfter: widget.moodAfter,
+                    contentType: widget.contentType,
+                    moodBefore: widget.moodBefore,
+                    ratingBefore: widget.ratingBefore,
+                    timestamp: functions.getTimestamp(),
+                  );
+                  await FeedbackRecord.collection.doc().set(feedbackCreateData);
+                  await Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => GoodbyePageWidget(),
                     ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                      child: FFButtonWidget(
-                        onPressed: () async {
-                          final feedbackCreateData = createFeedbackRecordData(
-                            ratingAfter: ratingBarValue.round(),
-                            moodAfter: widget.moodAfter,
-                            contentType: widget.contentType,
-                            moodBefore: widget.moodBefore,
-                            ratingBefore: widget.ratingBefore,
-                            timestamp: functions.getTimestamp(),
-                          );
-                          await FeedbackRecord.collection
-                              .doc()
-                              .set(feedbackCreateData);
-                          await Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => GoodbyePageWidget(),
-                            ),
-                          );
-                        },
-                        text: 'Submit',
-                        options: FFButtonOptions(
-                          width: 130,
-                          height: 40,
-                          color: Color(0xFFFDD835),
-                          textStyle: FlutterFlowTheme.subtitle2.override(
-                            fontFamily: 'Poppins',
-                            color: Colors.white,
-                          ),
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                            width: 1,
-                          ),
-                          borderRadius: 12,
-                        ),
-                      ),
-                    ),
-                  ],
+                  );
+                },
+                text: 'Submit',
+                options: FFButtonOptions(
+                  width: 130,
+                  height: 40,
+                  color: Color(0xFFFDD835),
+                  textStyle: FlutterFlowTheme.subtitle2.override(
+                    fontFamily: 'Poppins',
+                    color: Colors.white,
+                  ),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 1,
+                  ),
+                  borderRadius: 12,
                 ),
               ),
             ),
